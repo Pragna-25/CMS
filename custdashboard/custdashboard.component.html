@@ -1,0 +1,27 @@
+
+<hr style="border-color:blue"><div style="background-color:darkgray"><h2 style="text-align:center">CUSTOMER DASHBOARD</h2>
+
+      <h3 style="text-align: center">WELCOME {{cuserName}}</h3></div>
+  <body>  <nav class="navbar navbar-default"style="background-color:lavender">
+    <ul class="nav navbar-nav navbar-left">
+      <li>
+        <a routerLink="custplaceorder"style="font-weight: bold">PLACE ORDER</a>
+      </li> &nbsp;&nbsp;
+      <li>
+        <a routerLink="custorderhistory"style="font-weight:bold"> CUSTOMER ORDER HISTORY</a>
+      </li>&nbsp;&nbsp;
+      <li>
+        <a routerLink="custshowwallet"style="font-weight: bold">CUSTOMER WALLET</a>
+      </li>&nbsp;&nbsp;
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <button name="logout" id="logout"  class="btn navbar-btn btn-danger" (click)="logout()">LOGOUT</button>
+      </li>
+  
+      
+
+    </ul>
+  </nav>
+  <router-outlet></router-outlet>
+  </body>

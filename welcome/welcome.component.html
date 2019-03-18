@@ -1,0 +1,18 @@
+
+    <body  *ngFor='let cust of customers'>
+    
+        <h1 style="color: black;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-weight: bold">INFORMATION</h1>
+        <div class="container">
+          <div style="border-style: inset">
+            <img src='assets\{{cust.cid}}.jpg' align='right' alt="FoodImages"width="200" height="225" >
+        <h2>ID:{{cust.cid}}</h2>
+        <h2>NAME:{{cust.cname}}</h2>
+        <h2>USERNAME:{{cust.cuserName}}</h2>
+        <h2>PHONE:{{cust.cphone}}</h2>
+        <h2>EMAIL:{{cust.cemail}}</h2>
+       
+      </div>
+      
+      </div>
+      </body>
+    

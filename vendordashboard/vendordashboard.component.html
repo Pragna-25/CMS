@@ -1,0 +1,27 @@
+<html>
+  
+  <hr style="border-color:blue"><div style="background-color:lightsalmon">   <h2 style="text-align: center">VENDOR DASHBOARD</h2>
+   <h2 style="text-align: center">WELCOME TO {{vname}}</h2></div>
+ 
+   <body >
+   
+            <nav class="navbar navbar-default" style="background-color:lightyellow">
+              <ul class="nav navbar-nav navbar-left">
+                <li>
+                  <a routerLink="vendororderhistory" style="font-weight: bold">VENDOR ORDER HISTORY</a>
+                </li> &nbsp;&nbsp;
+                <li>
+                  <a routerLink="vendoracceptdeny"style="font-weight: bold">ACCEPT/DENY</a>
+                </li>&nbsp;&nbsp;
+              </ul>
+                <ul class="nav navbar-nav navbar-right">
+                <li>
+                  <button name="logout" id="logout" class="btn navbar-btn btn-danger" style="text-align:right"  (click)="logout()">LOGOUT</button>
+                </li>
+              
+              </ul>
+            </nav>
+            <router-outlet></router-outlet>
+    
+  </body>
+</html>

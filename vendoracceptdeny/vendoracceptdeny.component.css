@@ -1,0 +1,30 @@
+#vendor {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  #vendor td,
+  #vendor th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+
+  #vendor tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  #vendor tr:hover {
+    background-color: #ddd;
+  }
+
+  #vendor  th {
+  
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 6px;
+    background-color:lightpink;
+      color:black;
+  }
+  

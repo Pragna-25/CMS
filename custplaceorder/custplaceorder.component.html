@@ -1,0 +1,44 @@
+
+  <table class="table class bordered table-hover" id="menu">
+  <thead>  
+  <tr>  
+  <th>FOOD ID</th>  
+  <th>FOOD NAME</th>  
+  <th>VID</th>   
+  <th>FOOD DESCRIPTION</th>  
+  <th>FOOD PRICE</th>    
+  <th>FOOD CATEGORY</th>
+  <th>QUANTITY</th>
+  <th>TOTAL PRICE</th>
+  </tr>  
+  </thead>  
+  <tbody>  
+  <tr *ngFor='let menu of menus; trackBy: trackByFn(index,menu)'> 
+      <input type="checkbox" name='menu.foodId'
+             [value]='menu.foodId'
+             (click)=toggleSelect(menu,$event.target.checked)/>
+                {{menu.foodId}}
+  <td>{{menu.foodName}}</td>    
+  <td>{{menu.vid}}</td> 
+  <td>{{menu.foodCategory}}</td>  
+  <td>{{menu.foodPrice}}</td>  
+  <td>{{menu.foodDescription}}</td> 
+  <input type="number" class="form-control"  [disabled]='!menu.isSelected'
+  [(ngModel)]="menu.qty" name="qty"
+  #qty="ngModel" min="1" required>
+  <span *ngIf = "qty.invalid && qty.touched"
+  style = "color: red">qty is required... </span>
+
+  <td>{{calc(menu)}}</td> 
+  </tr> 
+  <tr *ngIf="!menus || menus.length==0">  
+  <td colspan="6">  
+  No menus to display  
+  </td>  
+  </tr>  
+  </tbody>  
+</table>
+<hr>
+<div style="text-align: center">
+<button (click) = 'addOrder()' id="placeorder">Add Item</button></div>
+<br>

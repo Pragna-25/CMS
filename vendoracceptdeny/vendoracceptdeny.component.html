@@ -1,0 +1,41 @@
+<table class="table table-bordered table-hover" id="vendor">
+  <thead>
+    <tr>
+      <th></th>
+      <th>ORDER ID</th>
+      <th>FOOD ID</th>
+      <th>ORDER TIME</th>
+      <th>CUSTOMER ID</th>
+      <th>ESTIMATED TIME</th>
+      <th>ORDER REASON</th>
+      <th>ORDER STATUS</th>
+      <th>QTY</th>
+      <th>TOTAL PRICE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor='let ord of orders'>
+      <td><input type="checkbox" [value]='ord.orderId' (click)="isChecked(ord.orderId,ord,$event.target.checked)"></td>
+      <td>{{ord.orderId}}</td>
+      <td>{{ord.foodId}}</td>
+      <td>{{ord.otime}}</td>
+      <td>{{ord.cid}}</td>
+      <td>{{ord.etime}}</td>
+      <td><input type="text" class="form-group" [(ngModel)]="ord.oreason" [disabled]='!ord.checked'required></td>
+      <td>{{ord.ostatus}}</td>
+      <td>{{ord.qty}}</td>
+      <td>{{ord.tprice}}</td>
+    </tr>
+    <tr *ngIf="!orders || orders.length==0">
+      <td colspan="7">
+        No orders to display
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div class="form-group">
+  <button class="btn btn-6 btn-6k" style="background-color: blanchedalmond;position: relative; left:5px"
+  (click)="accept('DELIVERED')"><b>Accept</b></button>
+  <button class="btn btn-6 btn-6k" style="background-color: gray;position: relative; left:0px"
+  (click)="deny('CANCELLED')"><b>Deny</b></button>
+</div>

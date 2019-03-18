@@ -1,0 +1,22 @@
+
+div {
+    border-radius: 5px;
+    padding: 10px;
+
+   
+  }
+  input[type=text] {
+    background-color: white;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+
+  }
+  .form-control{
+      width:50%;
+  }
+  h2{
+    font-size: 250%;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: brown;
+  }
