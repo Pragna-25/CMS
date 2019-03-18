@@ -1,0 +1,46 @@
+{"orderId":1,"foodId":1001,"qty":1,"vid":500,"cid":5,"ostatus":"PLACE_ORDER","tprice":400.0,"etime":"12:57:27","otime":"12:57:27","oreason":" ","odate":1550428200000}
+
+
+$ curl -vvv -i -H "Accept: application/json" -H "Content-Type: application/json" -X POST http://localhost:8080/FTP106/aoi/customer/placeorder/1 -d '{"orderId":4,"foodId":1001, ,"vid":500,"cid":5,"ostatus":"PLACE_ORDER","tprice":400.0,"etime":"12:57:27","otime":"12:57:27","oreason":" ","odate":1550428200000}'
+
+
+
+
+CUSTOMER WALLET
+curl -vvv -i -H "Accept: application/json" -H "Content-Type: application/json" -X GET http://localhost:8080/FTP106/api/customer/wallet/1
+
+CUSTOMER DETAILS
+curl -vvv -i -H "Accept: application/json" -H "Content-Type: application/json" -X GET http://localhost:8080/FTP106/api/customer/1
+
+VENDOR DETAILS
+curl -vvv -i -H "Accept: application/json" -H "Content-Type: application/json" -X GET http://localhost:8080/FTP106/api/vendor/500
+
+CUSTOMER HISTORY
+curl -vvv -i -H "Accept: application/json" -H "Content-Type: application/json" -X GET http://localhost:8080/FTP106/api/order/cus/2
+
+VENDOR HISTORY
+curl -vvv -i -H "Accept: application/json" -H "Content-Type: application/json" -X GET http://localhost:8080/FTP106/api/order/ven/500
+
+MENU
+curl -vvv -i -H "Accept: application/json" -H "Content-Type: application/json" -X GET http://localhost:8080/FTP106/api/menu
+
+ORDERSTATUS
+curl -vvv -i -H "Accept: application/json" -H "Content-Type: application/json" -X PUT http://localhost:8080/FTP106/api/vendor/modify/11 -d '{"orderId":11,"ostatus":"DELIVERED","oreason":"hi"}'
+
+PLACEORDER
+curl -vvv -i -H "Accept: application/json" -H "Content-Type: application/json" -X POST http://localhost:8080/FTP106/api/customer/placeorder/2 -d '[{"foodId":1000,"qty":1}]'
+
+cudtomer login
+curl -vvv -i -H "Accept: application/json" -H "Content-Type: application/json" -X GET 'http://localhost:8080/FTP106/api/customer?cUserName=JOHN&cPassword=JOHN@123'
+
+vendor login
+curl -vvv -i -H "Accept: application/json" -H "Content-Type: application/json" -X GET 'http://localhost:8080/FTP106/api/vendor?vUserName=Deepak&vPassword=password'
+
+placedorder fetch
+curl -vvv -i -H "Accept: application/json" -H "Content-Type: application/json" -X GET http://localhost:8080/FTP106/api/vendor/placedorder/500
+
+
+15000 
+14600
+
+curl -vvv -i -H "Accept: application/json" -H "Content-Type: application/json" -X GET 'http://localhost:8080/FTP106/api/order/ven/gst/503?month=03&year=2019'
